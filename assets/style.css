@@ -1,0 +1,128 @@
+.plupload-drop-zone {
+    border: 4px dashed #999999;
+    height: 200px;
+    margin: 3px;
+}
+
+.plupload-drop-zone-inside {
+    margin: 70px auto 0;
+    width: 250px;
+}
+
+.plupload-transfer {
+    position: relative;
+    float: left;
+}
+
+.plupload-transfer > div {
+    position: relative;
+    background-color: #d3d3d3;
+    margin: 2px;
+    padding: 2px;
+    border: 1pt black solid;
+    overflow: hidden;
+    width: auto;
+    height: 80px;
+}
+
+.plupload-transfer .plupload-image {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.plupload-transfer  .plupload-name {
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.plupload-transfer  .plupload-size {
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.plupload-transfer.plupload-error .plupload-error-msg {
+    color: red;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.plupload-transfer .plupload-progress {
+    margin: 0;
+}
+
+.plupload-transfer-size1 .plupload-transfer {
+    width: 100%;
+}
+
+.plupload-transfer-size2 .plupload-transfer {
+    width: 50%;
+}
+
+.plupload-transfer-size3 .plupload-transfer {
+    width: 100px;
+}
+
+.plupload-transfer-size1 .plupload-image,
+.plupload-transfer-size2 .plupload-image {
+    float: left;
+    width: 100px;
+}
+
+.plupload-transfer-size3 .plupload-image {
+    position: absolute;
+    width: 100px;
+    top: 10px;
+}
+
+.plupload-transfer-size1 .plupload-progress,
+.plupload-transfer-size2 .plupload-progress {
+    margin: 10px 50px 0px 150px;
+    height: 10px;
+}
+
+.plupload-transfer-size3 .plupload-transfer>div {
+    height: 100px;
+}
+
+.plupload-transfer-size3 .plupload-progress {
+    position: absolute;
+    height: 8px;
+    width: 80px;
+    top: 2px;
+    left: 8px;
+}
+
+.plupload-transfer-size3 .plupload-size {
+    display: none;
+}
+
+.plupload-transfer-size3 .plupload-error .plupload-error-msg {
+    position: absolute;
+    line-height: 1em;
+    top: 8px;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    font-size: .7em;
+}
+
+.plupload-transfer-size3 .plupload-name {
+    position: absolute;
+    line-height: 1em;
+    top: 90px;
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+.plupload-transfer-size3 .plupload-name:hover {
+    padding-top: 8px;
+    background-color: #e3e3e3;
+    top: 30px;
+    transition: top 400ms;
+    -webkit-transition: top 400ms;
+}
