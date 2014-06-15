@@ -1,6 +1,5 @@
 <?php
 namespace athos99\plupload;
-
 use yii\web\AssetBundle;
 
 class Asset extends AssetBundle

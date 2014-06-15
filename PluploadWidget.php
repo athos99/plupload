@@ -1,10 +1,7 @@
 <?php
 namespace athos99\plupload;
-;
 use yii;
-use yii\base\View;
-use yii\helpers\Html;
-
+use yii\web\View;
 
 class PluploadWidget extends yii\base\Widget
 {
@@ -57,7 +54,7 @@ class PluploadWidget extends yii\base\Widget
         $urlAsset = $bundle->baseUrl;
         $request = \Yii::$app->getRequest();
         if ($request->enableCsrfValidation) {
-            $this->multipart_params[$request->csrfTokenName] = $request->getCsrfToken();
+            $this->multipart_params[$request->csrfParam] = $request->getCsrfToken();
         }
 
         $pluploadOptions = array(

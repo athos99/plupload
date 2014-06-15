@@ -1,7 +1,5 @@
 <?php
 namespace athos99\plupload;
-;
-
 
 class PluploadManager extends \yii\base\Component
 {
