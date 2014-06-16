@@ -1,13 +1,16 @@
 <?php
 namespace athos99\plupload;
+
 use yii;
 use yii\web\View;
+
 
 class PluploadWidget extends yii\base\Widget
 {
 
     public $urlUpload = null;
     public $multipart_params = array();
+    public $data;
     public $baseStyle = 'plupload'; // null, 'plupload','bootstrap' or 'ui'
 
     public $progressClass = '';
@@ -47,8 +50,8 @@ class PluploadWidget extends yii\base\Widget
         $this->getId(true);
         \yii::$aliases['@plupload'] = dirname(__FILE__);
         $view = $this->getView();
-      $view->registerAssetBundle('athos99\plupload\Asset');
-        $view->registerAssetBundle('athos99\plupload\\' . $this->baseStyle.'Asset');
+        $view->registerAssetBundle('athos99\plupload\Asset');
+        $view->registerAssetBundle('athos99\plupload\\' . $this->baseStyle . 'Asset');
         $am = $view->getAssetManager();
         $bundle = $am->getBundle('athos99\plupload\Asset');
         $urlAsset = $bundle->baseUrl;
@@ -91,11 +94,15 @@ class PluploadWidget extends yii\base\Widget
             View::POS_END);
     }
 
-
     public function renderHTML()
     {
-        ?>
 
+        if (is_array($this->data))
+            echo PHP_EOL;
+            foreach ($this->data as $key => $data) {
+                echo  yii\helpers\Html::hiddenInput($key, $data).PHP_EOL ;
+            }
+        ?>
         <div class="plupload">
             <div id="plupload-container" class="plupload-drop-zone">
                 <div class="plupload-drop-zone-inside">
@@ -128,7 +135,8 @@ class PluploadWidget extends yii\base\Widget
     }
 
 
-    public function run()
+    public
+    function run()
     {
         $this->renderHTML();
     }
