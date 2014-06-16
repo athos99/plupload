@@ -4,7 +4,7 @@ use yii\web\AssetBundle;
 
 class Asset extends AssetBundle
 {
-    public $sourcePath = '@athos99/plupload/assets';
+    public $sourcePath = '@vendor/athos99/plupload/assets';
     public $css = array(
         'style.css',
     );

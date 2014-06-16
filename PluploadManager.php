@@ -26,10 +26,11 @@ class PluploadManager extends \yii\base\Component
 
     public function cleanFileName($file)
     {
-        $map = \yii\helpers\Inflector::$transliteration + array(
+        $file = str_replace(array_keys(\yii\helpers\Inflector::$transliteration), \yii\helpers\Inflector::$transliteration, $file);
+        $map = [
                 '/[^\w\s.-_]/' => ' ',
                 '/\\s+/' => '-',
-            );
+            ];
         return preg_replace(array_keys($map), array_values($map), $file);
     }
 
