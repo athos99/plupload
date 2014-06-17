@@ -15,6 +15,11 @@ class PluploadManager extends \yii\base\Component
 
     public $_filePath;
 
+
+    function getFilename($file) {
+        return $this->targetDir .'/'.$file;
+    }
+
     public function init()
     {
         parent::init();

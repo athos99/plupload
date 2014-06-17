@@ -50,10 +50,10 @@ class PluploadWidget extends yii\base\Widget
         $this->getId(true);
         \yii::$aliases['@plupload'] = dirname(__FILE__);
         $view = $this->getView();
-
+        //$view->registerAssetBundle('athos99\plupload\Asset');
         $view->registerAssetBundle('athos99\plupload\\' . $this->baseStyle . 'Asset');
         $am = $view->getAssetManager();
-        $bundle = $am->getBundle('athos99\plupload\Asset');
+        $bundle = $am->getBundle('athos99\plupload\\' . $this->baseStyle . 'Asset');
         $urlAsset = $bundle->baseUrl;
         $request = \Yii::$app->getRequest();
         if ($request->enableCsrfValidation) {

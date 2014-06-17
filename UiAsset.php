@@ -8,5 +8,6 @@ class UiAsset extends AssetBundle
     public $depends = array(
         'yii/jui/theme/base/progressbar',
         'yii/jui/progressbar',
+        'athos99\plupload\Asset',
     );
 }

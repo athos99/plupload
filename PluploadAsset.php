@@ -8,5 +8,7 @@ class PluploadAsset extends AssetBundle
     public $css = array(
         'plupload.css',
     );
-
+    public $depends = array(
+        'athos99\plupload\Asset',
+    );
 }
