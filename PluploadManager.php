@@ -17,7 +17,7 @@ class PluploadManager extends \yii\base\Component
 
 
     function getFilename($file) {
-        return $this->targetDir .'/'.$file;
+        return $this->targetDir .'/'.$this->cleanFileName($file);
     }
 
     public function init()
