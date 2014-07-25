@@ -16,9 +16,7 @@ class PluploadManager extends \yii\base\Component
     public $_filePath;
 
 
-    function getFilename($file) {
-        return $this->targetDir .'/'.$this->cleanFileName($file);
-    }
+
 
     public function init()
     {
@@ -61,7 +59,7 @@ class PluploadManager extends \yii\base\Component
         $this->cleanTmpDir();
         $file = $this->store();
         if (method_exists(\yii::$app->controller, 'downloaded') && $file !== null && $file !== false) {
-            if (\yii::$app->controller->downloaded(array($this->fileName=>$file)) === false) {
+            if (\yii::$app->controller->downloaded([$this->fileName=>$file]) === false) {
                 $file=false;
             }
         }

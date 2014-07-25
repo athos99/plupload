@@ -5,9 +5,9 @@ use yii\web\AssetBundle;
 class BootstrapAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/athos99/plupload/assets';
-    public $depends = array(
+    public $depends = [
         'athos99\plupload\Asset',
         'yii\bootstrap\BootstrapAsset',
-    );
+    ];
 
 }

@@ -67,7 +67,7 @@ class PluploadWidget extends yii\base\Widget
 //            'chunk_size' => '400kb',
             'drop_element' => 'plupload-container',
             'file_data_name' => 'file',
-            'filters' => array(array('title' => 'Image files', 'extensions' => 'jpg,gif,png')),
+            'filters' => array(['title' => 'Image files', 'extensions' => 'jpg,gif,png']),
             'flash_swf_url' => $urlAsset . '/xMoxie.swf',
 //     'headers'=>
             'max_file_size' => '30mb',
@@ -83,14 +83,14 @@ class PluploadWidget extends yii\base\Widget
             'urlstream_upload' => true,
         );
 
-        $transferOptions = array(
+        $transferOptions = [
             'progressOkClass' => 'plupload-progress ' . $this->progressOkClass,
             'progressErrorClass' => 'plupload-progress ' . $this->progressErrorClass,
-        );
+        ];
 
 
         $view->registerJs(
-            'var modules=modules||{};modules.plupload.options=' . json_encode(array('plupload' => $pluploadOptions, 'transfer' => $transferOptions)) . ';',
+            'var modules=modules||{};modules.plupload.options=' . json_encode(['plupload' => $pluploadOptions, 'transfer' => $transferOptions]) . ';',
             View::POS_END);
     }
 

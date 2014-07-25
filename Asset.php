@@ -5,16 +5,16 @@ use yii\web\AssetBundle;
 class Asset extends AssetBundle
 {
     public $sourcePath = '@vendor/athos99/plupload/assets';
-    public $css = array(
+    public $css = [
         'style.css',
-    );
-    public $js = array(
+    ];
+    public $js = [
         'modules.plupload.js',
         'moxie.js',
         'plupload.dev.js',
-    );
-    public $depends = array(
+    ];
+    public $depends = [
         'yii\web\JqueryAsset'
-    );
+    ];
 
 }

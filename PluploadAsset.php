@@ -5,10 +5,10 @@ use yii\web\AssetBundle;
 class PluploadAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/athos99/plupload/assets';
-    public $css = array(
+    public $css = [
         'plupload.css',
-    );
-    public $depends = array(
+    ];
+    public $depends = [
         'athos99\plupload\Asset',
-    );
+    ];
 }
