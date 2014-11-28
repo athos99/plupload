@@ -28,9 +28,6 @@
 
     },
     "require": {
-        "leafo/lessphp": "0.4.*@dev",
-        "leafo/scssphp": "dev-master",
-        "richthegeek/phpsass": "dev-master"
     },
     "autoload": {
         "psr-4": {
